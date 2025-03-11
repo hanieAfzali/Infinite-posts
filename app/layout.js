@@ -1,5 +1,12 @@
 import "./globals.css";
 import QueryProvider from "./QueryProvider";
+import { Poppins } from 'next/font/google';
+
+const poppins = Poppins({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata = {
   title: "Next.js",
@@ -8,7 +15,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={poppins.className}>
       <body >
         <QueryProvider>{children}</QueryProvider>
       </body>
