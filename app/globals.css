@@ -1,4 +1,14 @@
-/* @custom-variant dark (&:where(.dark, .dark *));
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *)); */
+/* {
+  "window.autoDetectColorScheme": false
+} */
 
 @import "tailwindcss";
+
+html {
+  max-width: 704px;
+  justify-self: center;
+}
+.dark {
+  background-color: #01182e;
+  color: white;
+}

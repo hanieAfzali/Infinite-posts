@@ -1,6 +1,7 @@
 "use client";
 import usePosts from "../app/hooks/usePosts";
 import { LikeHeart } from "./SVGs";
+import "../app/globals.css"
 
 const Post = () => {
   const { data, isLoading, error } = usePosts();
@@ -9,15 +10,15 @@ const Post = () => {
   if (error) return <p className="text-center text-red-500">error</p>;
 
   return (
-    <div className="w-full max-w-2xl">
+    <div className="mx-2 pt-2 flex flex-col gap-3" >
       {data.map((post) => (
         <div
           key={post.id}
-          className="p-6 m-4 rounded-lg bg-[#DDC3C3] dark:bg-gray-700 text-black dark:text-white flex justify-between items-center shadow-md"
+          className="p-6 rounded-lg flex justify-between items-center shadow-md w-full max-w-2xl border border"
         >
           <div className="flex gap-3 items-center">
             <img
-              className="bg-white rounded-full h-16 w-16 p-2"
+              className="border border-[#d2d4d6] bg-white rounded-full shadow-lg b h-16 w-16 p-2"
               alt="profile"
               src="/images/woman.png"
             />

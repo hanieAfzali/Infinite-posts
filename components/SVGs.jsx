@@ -8,8 +8,8 @@ export function LikeHeart() {
       <svg
       onClick={() => setLiked(!liked)}
       cursor={'pointer'}
-        width="20"
-        height="20"
+        width="30"
+        height="30"
         viewBox="0 0 20 20"
         fill={liked ? "#D3302F" : "none"}
         xmlns="http://www.w3.org/2000/svg"
@@ -26,3 +26,24 @@ export function LikeHeart() {
       </svg>
     );
   }
+  export function LoginIcon({onClick}) {
+    return (
+      <svg
+      onClick={onClick}
+        width="30"
+        height="30"
+        viewBox="0 0 24 24"
+        fill="white"
+        stroke="#374151"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        cursor="pointer"
+      >
+        <circle cx="12" cy="8" r="4" stroke="#374151" fill="white" />
+        <path d="M6 21v-2a6 6 0 0112 0v2" stroke="#374151" fill="white" />
+        {/* <circle cx="12" cy="12" r="10" stroke="black" fill="none" /> */}
+      </svg>
+    );
+  }
+  
